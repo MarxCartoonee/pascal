@@ -1,173 +1,152 @@
 ﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>Уводни део у програмирање у Паскалу</title>
 
-<link rel="stylesheet" type="text/css" media="screen" href="css/navigation.css" />
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Уводни део у програмирање у Паскалу</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/navigation.css">
+        <script src="js/calcHeight.js"></script>
+    </head>
 
-<style type="text/css">
-body{padding: 20px;background-color: #0f67c7;
-    font: 90% "Trebuchet MS",Verdana,Arial,sans-serif}
-h1,h2,p{margin: 0 10px}
-h1{font-size: 250%;color: #000000}
-h2{font-size: 200%;color: #000000}
-h2{padding-top: 0.3em}
-div#box{ position:relative;float:left;top:16px;left:16px;width:500px;background: #ffffff}
-div#tinybox{ position:relative;float:right;top:16px;right:16px;width:200px;background: #ffffff}
+    <body>
+        <div id="header">
+            <div id="animatedtabs" class="animatedtabs">
+                <ul>
+                    <li>
+                        <a href="index.html" title="Home">
+                            <span>Почетна</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="basic.html" title="Basics">
+                            <span>Основе</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="exam.html" title="Examples">
+                            <span>Примери</span>
+                        </a>
+                    </li>
+                    <li class="selected">
+                        <a href="javascript:this.location.reload();" title="Exercise">
+                            <span>Вежбе</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cont.html" title="Contact">
+                            <span>Контакт+Инфо</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-b.rtop, b.rbottom{display:block;background: #0f67c7}
-b.rtop b, b.rbottom b{display:block;height: 1px;
-    overflow: hidden; background: #ffffff}
-b.r1{margin: 0 5px}
-b.r2{margin: 0 3px}
-b.r3{margin: 0 2px}
-b.rtop b.r4, b.rbottom b.r4{margin: 0 1px;height: 2px}
+        <div id="content">
+            <div id="box">
+                <b class="rtop">
+                    <b class="r1"></b>
+                    <b class="r2"></b>
+                    <b class="r3"></b>
+                    <b class="r4"></b>
+                </b>
+                <center>
+                    <h1>Условна наредба</h1>
+                </center>
+                <hr>
+                <p>Које ће вредности имати променљиве j и k после извршења наредбе условног преласка:
+                    <br>
+                    <code>if j>k<br>then j:=k<br>else k:=k-1</code>
+                    <br>ако су вредности променљивих:
+                    <br>а)j=2, k=4
+                    <br>б)j=2, k=2
+                    <br>в)j=4, k=2</p>
+                <br>
+                <hr>
+                <p>Написати наредбу условног преласка којом се вредност променљиве f израчунава по формули:
+                    <br>
+                    <code>f=a+b, ако је а непарно;<br>f=a*b, ако је а парно</code>
+                </p>
+                <br>
+                <hr>
+                <p>За које вредности променљиве а нису еквивалентне наредбе условног преласка:
+                    <br>
+                    <code>а)if a>0 then b:=2 else b:=5<br>б)if a<0 then b:=5 else b:=2</code>
+                </p>
+                <br>
+                <hr>
+                <p>Коју ће вредност имати променљива x по извршењу следећих наредби:
+                    <br>
+                    <code>а)x:=2;<br>if x<3 then x:=x+3;<br><br>б)x:=2; y:=1;<br>if x+y<=x-y<br>then x:=5<br>else x:=+5;<br><br>в)x:=1; y:=-5<br>if abs(y)>2<br>then<br>if y<0<br>then x:=0
+else x:=2;<br><br>г)x:=10; y:=2;<br>if abs(y)>3<br>then begin<br>if y<0<br>then x:=3<br>else x:=4<br>end;<br><br>д)x:=10; y:=2;<br>if abs(y)>3<br>then<br>begin if y<0 then x:=3 end<br>else x:=4;</code>
+                </p>
+                <br>
+                <hr>
+                <p>Да ли се следећом наредбом условног преласка:
+                    <br>
+                    <code>if a<=6<br>then c:=1<br>else if a>6<br>then c:=2<br>else c:=3</code>
+                    <br>може променљивој a доделити вредност 3? Како се може упростити дата наредба?</p>
+                <br>
+                <br>
+                <b class="rbottom">
+                    <b class="r4"></b>
+                    <b class="r3"></b>
+                    <b class="r2"></b>
+                    <b class="r1"></b>
+                </b>
+            </div>
+            <div id="tinybox">
+                <b class="rtop">
+                    <b class="r1"></b>
+                    <b class="r2"></b>
+                    <b class="r3"></b>
+                    <b class="r4"></b>
+                </b>
+                <center>
+                    <h2>Задаци</h2>
+                </center>
+                <hr>
+                <ul>
+                    <li>
+                        <a href="readwrite.html">Наредбе улаза и излаза</a>
+                    </li>
+                    <li>
+                        <a href="dodela.html">Наредба доделе</a>
+                    </li>
+                    <li>
+                        <a href="program.html">Креирање програма</a>
+                    </li>
+                    <li>
+                        <a href="if.html">Условна наредба</a>
+                    </li>
+                    <li>
+                        <a href="case.html">Наредба вишеструког гранања</a>
+                    </li>
+                    <li>
+                        <a href="for.html">Наредба циклуса са параметром</a>
+                    </li>
+                    <li>
+                        <a href="while.html">Наредба циклуса са предусловом</a>
+                    </li>
+                    <li>
+                        <a href="repeat.html">Наредба циклуса са пост-условом</a>
+                    </li>
+                </ul>
+                <b class="rbottom">
+                    <b class="r4"></b>
+                    <b class="r3"></b>
+                    <b class="r2"></b>
+                    <b class="r1"></b>
+                </b>
+            </div>
+            <div class="clear"></div>
 
-body {
-width:750px;
-margin:0 auto;
-margin-top:30px;
-}
+        </div>
+        <div id="footer">
+            <div id="copyright">
+                <font color="#ffffff">©2008 - Marx Cartoonee</font>
+            </div>
+        </div>
+    </body>
 
-
-
-/* ----- HEADER ----- */
-
-
-
-#header {
-width:750px;
-height:190px;
-background-image: url(images/title.png);
-}
-
-#animatedtabs {
-position: absolute;
-top: 207px;
-}
-
-
-
-
-
-/* ----- MAIN CONTENT ----- */
-
-
-
-#content { 
-width:750px;
-min-height:450px; /* for modern browsers */
-height:auto !important; /* for modern browsers */
-height:450px; /* for IE5.x and IE6 */background-color:#333333;
-background-image: url(images/bg.png);
-background-repeat: repeat;
-
-}
-
-.clear{
-clear:both;
-}
-
-
-/* ----- FOOTER ----- */
-
-
-
-#footer { 
-width:750px;
-height:100px;
-background-image: url(images/bottom.png);
-}
-
-#copyright {
-text-align: center;
-position: relative;
-top: 70px;
-}
-
-
-</style>
-
-
-</head>
-<body>
-<style type="text/css">
-<!--
-body {
-background-color: #ffffff;
-background-image: url(images/gradient.jpg);
-background-repeat: repeat-x;
-}
--->
-</style>
-
-<div id="header">
-<div id="animatedtabs" class="animatedtabs">
-<ul>
-<li><a href="index.html" title="Home"><span>Почетна</span></a></li>
-<li><a href="basic.html" title="Basics"><span>Основе</span></a></li>
-<li><a href="exam.html" title="Examples"><span>Примери</span></a></li>
-<li class="selected"><a href="javascript:this.location.reload();" title="Exercise"><span>Вежбе</span></a></li>
-<li><a href="cont.html" title="Contact"><span>Контакт+Инфо</span></a></li>	
-</ul>
-</div>
-         </div>
-
-<div id="content">
-<div id="box">
-<b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b>
-<center><h1>Условна наредба</h1></center>
-<hr>
-<p>Које ће вредности имати променљиве j и k после извршења наредбе условног преласка:
-<br><code>if j>k<br>then j:=k<br>else k:=k-1</code>
-<br>ако су вредности променљивих:
-<br>а)j=2, k=4
-<br>б)j=2, k=2
-<br>в)j=4, k=2</p>
-<br>
-<hr>
-<p>Написати наредбу условног преласка којом се вредност променљиве f израчунава по формули:
-<br><code>f=a+b, ако је а непарно;<br>f=a*b, ако је а парно</code></p>
-<br>
-<hr>
-<p>За које вредности променљиве а нису еквивалентне наредбе условног преласка:
-<br><code>а)if a>0 then b:=2 else b:=5<br>б)if a<0 then b:=5 else b:=2</code></p>
-<br>
-<hr>
-<p>Коју ће вредност имати променљива x по извршењу следећих наредби:
-<br><code>а)x:=2;<br>if x<3 then x:=x+3;<br><br>б)x:=2; y:=1;<br>if x+y<=x-y<br>then x:=5<br>else x:=+5;<br><br>в)x:=1; y:=-5<br>if abs(y)>2<br>then<br>if y<0<br>then x:=0
-else x:=2;<br><br>г)x:=10; y:=2;<br>if abs(y)>3<br>then begin<br>if y<0<br>then x:=3<br>else x:=4<br>end;<br><br>д)x:=10; y:=2;<br>if abs(y)>3<br>then<br>begin if y<0 then x:=3 end<br>else x:=4;</code></p>
-<br>
-<hr>
-<p>Да ли се следећом наредбом условног преласка:
-<br><code>if a<=6<br>then c:=1<br>else if a>6<br>then c:=2<br>else c:=3</code>
-<br>може променљивој a доделити вредност 3? Како се може упростити дата наредба?</p>
-<br>
-<br>
-<b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
-</div>
-<div id="tinybox">
-<b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b>
-<center><h2>Задаци</h2></center>
-<hr>
-<ul>
-<li><a href="readwrite.html">Наредбе улаза и излаза</a></li>
-<li><a href="dodela.html">Наредба доделе</a></li>
-<li><a href="program.html">Креирање програма</a></li>
-<li><a href="if.html">Условна наредба</a></li>
-<li><a href="case.html">Наредба вишеструког гранања</a></li>
-<li><a href="for.html">Наредба циклуса са параметром</a></li>
-<li><a href="while.html">Наредба циклуса са предусловом</a></li>
-<li><a href="repeat.html">Наредба циклуса са пост-условом</a></li>
-</ul>
-<b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
-</div>
-<div class="clear"></div>
-
-</div>
-<div id="footer">
-<div id="copyright"><font color="#ffffff">©2008 - Marx Cartoonee</font></div>
-</div>
-</body>
 </html>
