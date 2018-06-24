@@ -1,0 +1,184 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Уводни део у програмирање у Паскалу</title>
+
+<link rel="stylesheet" type="text/css" media="screen" href="css/navigation.css" />
+
+<script language="JavaScript">
+<!--
+function calcHeight()
+{
+  //find the height of the internal page
+  var the_height=
+    document.getElementById('content').contentWindow.
+      document.body.scrollHeight;
+
+  //change the height of the iframe
+  document.getElementById('content').height=
+      the_height;
+}
+//-->
+</script>
+
+<style type="text/css">
+
+body{padding: 20px;
+    font: 90% "Trebuchet MS",Verdana,Arial,sans-serif}
+h1,h2,p{margin: 0 10px}
+h1{font-size: 250%;color: #000000}
+h2{font-size: 200%;color: #000000}
+h2{padding-top: 0.3em}
+div#box{ position:relative;float:left;top:16px;left:16px;width:500px;background: #ffffff}
+div#tinybox{ position:relative;float:right;top:16px;right:16px;width:200px;background: #ffffff}
+
+b.rtop, b.rbottom{display:block;background: #0f67c7}
+b.rtop b, b.rbottom b{display:block;height: 1px;
+    overflow: hidden; background: #ffffff}
+b.r1{margin: 0 5px}
+b.r2{margin: 0 3px}
+b.r3{margin: 0 2px}
+b.rtop b.r4, b.rbottom b.r4{margin: 0 1px;height: 2px}
+
+
+body {
+width:750px;
+margin:0 auto;
+margin-top:30px;
+}
+
+
+
+/* ----- HEADER ----- */
+
+
+
+#header {
+width:750px;
+height:190px;
+background-image: url(images/title.png);
+}
+
+#animatedtabs {
+position: absolute;
+top:207px;
+}
+
+
+
+
+
+/* ----- MAIN CONTENT ----- */
+
+
+
+#content { 
+width:750px;
+min-height:450px; /* for modern browsers */
+height:auto !important; /* for modern browsers */
+height:450px; /* for IE5.x and IE6 */
+background-color:#333333;
+background-image: url(images/bg.png);
+background-repeat: repeat;
+
+}
+
+.clear{
+clear:both;
+}
+
+/* ----- FOOTER ----- */
+
+
+
+#footer { 
+width:750px;
+height:100px;
+background-image: url(images/bottom.png);
+}
+
+#copyright {
+text-align: center;
+position: relative;
+top: 70px;
+}
+
+
+</style>
+
+
+</head>
+<body>
+<style type="text/css">
+<!--
+body {
+background-color: #000000;
+background-image: url(images/gradient.jpg);
+background-repeat: repeat-x;
+}
+-->
+</style>
+
+<div id="header">
+<div id="animatedtabs" class="animatedtabs">
+<ul>
+<li class="selected"><a href="javascript:this.location.reload();" title="Home"><span>Почетна</span></a></li>
+<li><a href="basic.html" title="Basics"><span>Основе</span></a></li>
+<li><a href="exam.html" title="Examples"><span>Примери</span></a></li>
+<li><a href="exer.html" title="Exercise"><span>Вежбе</span></a></li>
+<li><a href="cont.html" title="Contact"><span>Контакт+Инфо</span></a></li>	
+</ul>
+</div>
+         </div>
+
+<div id="content" onload="calcHeight();">
+ <div id="box">
+<b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b>
+<center><h1>Паскал</h1></center>
+<br><br>
+<p>Добродошли у свет Паскала. Овај императивни програмски језик је настао још 1970. године са сврхом да се користи за учење структурног програмирања. Име је добио по француском филозофу и математичару Блејзу Паскалу, а стандардизован је 1983. године.</p>
+<br>
+<p>Иако је углавном имао намену да подучава програмирање, многи ученици су ломили и још увек ломе зубе на Паскалу. Због тога је заживео овај пројекат, да покуша да вам приближи и олакша коришћење овог програмског језика.</p>
+<br>
+<p>Због тога немојте више одуговлачити већ крените са прегледањем лекција, примера и задатака, и већ убрзо вам Паскал неће представљати изазов.</p>
+<br>
+<b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
+</div>
+<div id="tinybox">
+<b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b>
+<center><h2>Више о Паскалу</h2>
+<hr>
+<h3>Информације</h3>
+</center>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/Pascal_(programming_language)" target="_blank">Wikipedia(Eng)</a></li>
+<li><a href="http://sr.wikipedia.org/wiki/Pascal" target="_blank">Wikipedia(Sr)</a></li>
+<li><a href="http://pascal-central.com/" target="_blank">Pascal Central</a></li>
+<li><a href="http://www.standardpascal.org/" target="_blank">Standard Pascal</a></li>
+</ul>
+<center><hr>
+<h3>Напредне лекције</h3>
+</center>
+<ul>
+<li><a href="http://www.geocities.com/hotdogcom/ptutor/paslist.html" target="_blank">Паскал у 16 лекција</a></li>
+</ul>
+<center><hr>
+<h3>Download</h3>
+</center>
+<ul>
+<li><a href="http://www.freepascal.org/" target="_blank">Freepascal</a></li>
+</ul>
+<center><hr>
+<script src="http://scripts.widgethost.com/pax/counter.js?counter=ctr-wzhnbnkomq"></script>
+<noscript><a href="http://www.pax.com/free-counters.html"><img src="http://counter.pax.com/counter/image?counter=ctr-wzhnbnkomq&noscript=1" alt="Free Hit Counter" border="0" /></a></noscript>
+</center>
+<b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
+</div>
+<div class="clear"></div>
+</div>
+<div id="footer">
+<div id="copyright"><font color="#ffffff">©2008 - Marx Cartoonee</font></div>
+</div>
+</body>
+</html>

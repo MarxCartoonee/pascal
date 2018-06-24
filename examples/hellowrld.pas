@@ -1,0 +1,5 @@
+PROGRAM PRIMER;
+BEGIN
+WRITELN ('Zdravo svete');
+READLN;
+END.

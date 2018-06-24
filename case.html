@@ -1,0 +1,173 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Уводни део у програмирање у Паскалу</title>
+
+<link rel="stylesheet" type="text/css" media="screen" href="css/navigation.css" />
+
+<style type="text/css">
+body{padding: 20px;background-color: #0f67c7;
+    font: 90% "Trebuchet MS",Verdana,Arial,sans-serif}
+h1,h2,p{margin: 0 10px}
+h1{font-size: 250%;color: #000000}
+h2{font-size: 200%;color: #000000}
+h2{padding-top: 0.3em}
+div#box{ position:relative;float:left;top:16px;left:16px;width:500px;background: #ffffff}
+div#tinybox{ position:relative;float:right;top:16px;right:16px;width:200px;background: #ffffff}
+
+b.rtop, b.rbottom{display:block;background: #0f67c7}
+b.rtop b, b.rbottom b{display:block;height: 1px;
+    overflow: hidden; background: #ffffff}
+b.r1{margin: 0 5px}
+b.r2{margin: 0 3px}
+b.r3{margin: 0 2px}
+b.rtop b.r4, b.rbottom b.r4{margin: 0 1px;height: 2px}
+
+body {
+width:750px;
+margin:0 auto;
+margin-top:30px;
+}
+
+
+
+/* ----- HEADER ----- */
+
+
+
+#header {
+width:750px;
+height:190px;
+background-image: url(images/title.png);
+}
+
+#animatedtabs {
+position: absolute;
+top: 207px;
+}
+
+
+
+
+
+/* ----- MAIN CONTENT ----- */
+
+
+
+#content { 
+width:750px;
+min-height:450px; /* for modern browsers */
+height:auto !important; /* for modern browsers */
+height:450px; /* for IE5.x and IE6 */background-color:#333333;
+background-image: url(images/bg.png);
+background-repeat: repeat;
+
+}
+
+.clear{
+clear:both;
+}
+
+
+/* ----- FOOTER ----- */
+
+
+
+#footer { 
+width:750px;
+height:100px;
+background-image: url(images/bottom.png);
+}
+
+#copyright {
+text-align: center;
+position: relative;
+top: 70px;
+}
+
+
+</style>
+
+
+</head>
+<body>
+<style type="text/css">
+<!--
+body {
+background-color: #ffffff;
+background-image: url(images/gradient.jpg);
+background-repeat: repeat-x;
+}
+-->
+</style>
+
+<div id="header">
+<div id="animatedtabs" class="animatedtabs">
+<ul>
+<li><a href="index.html" title="Home"><span>Почетна</span></a></li>
+<li><a href="basic.html" title="Basics"><span>Основе</span></a></li>
+<li><a href="exam.html" title="Examples"><span>Примери</span></a></li>
+<li class="selected"><a href="javascript:this.location.reload();" title="Exercise"><span>Вежбе</span></a></li>
+<li><a href="cont.html" title="Contact"><span>Контакт+Инфо</span></a></li>	
+</ul>
+</div>
+         </div>
+
+<div id="content">
+<div id="box">
+<b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b>
+<center><h1>Наредба вишеструког гранања</h1></center>
+<hr>
+<p>Шта ће се исписати извршавањем следећих наредби:
+<br><code>write('Redni broj: '); slovo:='E';<br>case slovo of<br>'A':writeln('1');<br>'E':writeln('5');<br>'I':writeln('9');<br>'O':writeln('15');<br>'U':writeln('U');<br>end;</p>
+<br>
+<hr>
+<p>Колике ће бити вредности променљивих после извршавања следећих наредби
+<br><code>p:=true; d:=1;<br>case k mod 10 of<br>3,2,7,5:d:=k;<br>1:;
+4,8:begin p:=false; d:=2 end;<br>9,6:begin p:=false; d:=3 end;<br>end;</code>
+<br>ако целобројна променљива k има следеће вредности:
+<br>а)6
+<br>б)235
+<br>в)71
+<br>г)100</p>
+<br>
+<hr>
+<p>Наредбу условног преласка којом се израчунава максимум два броја
+<br><code>if a>b<br>then max:=a<br>else max:=b</code>
+<br>заменити еквивалентном наредбом избора case.</p>
+<br>
+<hr>
+<p>Написати case наредбу еквивалентну следећој if наредби:
+<br><code>if k<0<br>then r:=r+1<br>else if k=1<br>then s:=s+1<br>else if (k=2) or (k=3) or (k=4)<br>then t:=t+2</code></p>
+<br>
+<hr>
+<p>Написати наредбу case којом се на основну бројних оцена 5, 4, 3, 2, 1 исписују описне оцене 'одличан', 'врло добар', 'добар', 'довољан', 'недовољан'.</p>
+<br>
+<br>
+<b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
+</div>
+<div id="tinybox">
+<b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b>
+<center><h2>Задаци</h2></center>
+<hr>
+<ul>
+<li><a href="readwrite.html">Наредбе улаза и излаза</a></li>
+<li><a href="dodela.html">Наредба доделе</a></li>
+<li><a href="program.html">Креирање програма</a></li>
+<li><a href="if.html">Условна наредба</a></li>
+<li><a href="case.html">Наредба вишеструког гранања</a></li>
+<li><a href="for.html">Наредба циклуса са параметром</a></li>
+<li><a href="while.html">Наредба циклуса са предусловом</a></li>
+<li><a href="repeat.html">Наредба циклуса са пост-условом</a></li>
+</ul>
+<b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
+</div>
+<div class="clear"></div>
+
+</div>
+<div id="footer">
+<div id="copyright"><font color="#ffffff">©2008 - Marx Cartoonee</font></div>
+</div>
+</body>
+</html>

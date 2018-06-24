@@ -1,0 +1,198 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Уводни део у програмирање у Паскалу</title>
+
+<link rel="stylesheet" type="text/css" media="screen" href="css/navigation.css" />
+
+
+
+<style type="text/css">
+body{padding: 20px;
+    font: 90% "Trebuchet MS",Verdana,Arial,sans-serif}
+h1,h2,p{margin: 0 10px}
+h1{font-size: 250%;color: #000000}
+h2{font-size: 200%;color: #000000}
+h2{padding-top: 0.3em}
+div#box{ position:relative;float:left;top:16px;left:16px;width:500px;background: #ffffff}
+div#tinybox{ position:relative;float:right;top:16px;right:16px;width:200px;background: #ffffff}
+
+b.rtop, b.rbottom{display:block;background: #0f67c7}
+b.rtop b, b.rbottom b{display:block;height: 1px;
+    overflow: hidden; background: #ffffff}
+b.r1{margin: 0 5px}
+b.r2{margin: 0 3px}
+b.r3{margin: 0 2px}
+b.rtop b.r4, b.rbottom b.r4{margin: 0 1px;height: 2px}
+
+body {
+width:750px;
+margin:0 auto;
+margin-top:30px;
+}
+
+
+
+/* ----- HEADER ----- */
+
+
+
+#header {
+width:750px;
+height:190px;
+background-image: url(images/title.png);
+}
+
+#animatedtabs {
+position: absolute;
+top: 207px;
+}
+
+
+
+
+
+/* ----- MAIN CONTENT ----- */
+
+
+
+#content { 
+width:750px;
+background-color:#333333;
+background-image: url(images/bg.png);
+background-repeat: repeat;
+
+}
+
+.clear{
+clear:both;
+}
+
+
+/* ----- FOOTER ----- */
+
+
+
+#footer { 
+width:750px;
+height:100px;
+background-image: url(images/bottom.png);
+}
+
+#copyright {
+text-align: center;
+position: relative;
+top: 70px;
+}
+
+
+</style>
+
+
+</head>
+<body> 
+<style type="text/css">
+<!--
+body {
+background-color: #ffffff;
+background-image: url(images/gradient.jpg);
+background-repeat: repeat-x;
+}
+-->
+</style>
+
+<div id="header">
+<div id="animatedtabs" class="animatedtabs">
+<ul>
+<li><a href="index.html" title="Home"><span>Почетна</span></a></li>
+<li class="selected"><a href="javascript:this.location.reload();" title="Basics"><span>Основе</span></a></li>
+<li><a href="exam.html" title="Examples"><span>Примери</span></a></li>
+<li><a href="exer.html" title="Exercise"><span>Вежбе</span></a></li>
+<li><a href="cont.html" title="Contact"><span>Контакт+Инфо</span></a></li>	
+</ul>
+</div>
+         </div>
+
+<div id="content" >
+     <div id="box">
+<b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b>
+<center><h1>Наредба вишеструког гранања</h1></center>
+<br>
+<p>Наредба вишеструког гранања или CASE се углавном користи ради прегледности програма када постоји више услова. Ова наредба има следећи облик</p>
+<br>
+<p><code>CASE <br>'израз' OF <br>'вредност':'наредба' <br>END;<br><br>CASE x OF <br>5:a:=18 <br>END;</code></p>
+<br>
+<p>Према примеру, уколико x има вредност 5 променљива а ће добити вредност 18.</p>
+<br>
+<p>Графички симбол је исти као код условне наредбе, осим што се повећава по потреби, одн. по броју услова.</p>
+<br>
+<p>Уколико се појави више константи у једном обележју одвајају се зарезом, а уколико се појави више команди, повезују се са BEGIN и  END;.</p>
+<br>
+<p><code>CASE 'израз' OF <br>'вредност1','вредност2','вредност3':BEGIN 'наредба';'наредба' END<br>END;<br><br>CASE x OF <br>1,2,3:BEGIN WRITELN (x); WRITELN(x * 6) END<br>END;</code></p>
+<br>
+<p>Ако x има вредност 1, 2 или 3 исписаће се и помножиће се са 6.</p>
+<br>
+<p>Више услова се одваја са ;.</p>
+<br>
+<p><code>CASE 'израз' OF <br>'вредност1':'наредба';<br>'вредност2','вредност3':'наредба'<br>END;<br><br>
+CASE x OF <br>1:WRITELN (x+2);<br>2,3:a:=6<br>END;</code></p>
+<br>
+<p>Ако x има вредност 1 исписаће се сабран са 2, ако има вредност 2 или 3, а ће добити вредност 6.</p>
+<br>
+<p><b>Напомена:</b> Код CASE наредбе се могу користити сви типови променљивих осим REAL.</p>
+<br>
+<p>И у CASE наредби је такође могуће убацити ELSE, где ће се наредба извршити уколико израз не одговара ни једној од вредности.
+<br>
+<p><code>CASE 'израз' OF <br>'вредност1':'наредба';<br>'вредност2':'наредба';<br>'вредност3':'наредба'<br>ELSE 'алтернативна наредба'<br>END;<br><br>
+CASE x OF <br>1:x:=x+2;;<br>3:x:=x-2;<br>4:WRITELN (x)<br>ELSE WRITELN ('Унета је недозвољена вредност')<br>END;</code></p>
+<br>
+<p>Уколико x нема ниједну од наведених вредности на екрану ће се исписати 'Унета је недозвољена вредност'.</p>
+<br>
+<p><b>Важно:</b> Једна константа не сме да се појави у обележју две или више наредби.</p>
+<br>
+<b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
+</div>
+<div id="tinybox">
+<b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b>
+<center><h2>Лекције</h2>
+<hr></center>
+<ul>
+<li><a href="basic.html">Основе</a></li>
+<li><a href="2.html">Резервисане речи и специјални знаци</a></li>
+<li><a href="3.html">Типови података</a></li>
+<li>Основни типови променљивих</li>
+ <ul>
+ <li><a href="4.html">Целобројни</a></li>
+ <li><a href="5.html">Реални</a></li>
+ <li><a href="6.html">Логички</a></li>
+ <li><a href="7.html">Знаковни</a></li>
+ </ul>
+<li><a href="8.html">Симболи алгоритма</a></li>
+<li>Програмске наредбе</li>
+ <ul>
+ <li><a href="9.html">Излазна</a></li>
+ <li><a href="10.html">Улазна</a></li>
+ <li><a href="11.html">Додела</a></li>
+ <li>Услови</li>
+   <ul>
+  <li><a href="12.html">If</a></li>
+  <li><a href="13.html">Case</a></li>
+  </ul>
+  <li>Циклуси</li>
+   <ul>
+   <li><a href="14.html">For</a></li>
+   <li><a href="15.html">While</a></li>
+   <li><a href="16.html">Repeat</a></li>
+  </ul>
+ </ul>
+</ul>
+<b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
+</div>
+<div class="clear"></div>
+</div>
+<div id="footer">
+<div id="copyright"><font color="#ffffff">©2008 - Marx Cartoonee</font></div>
+</div>
+</body>
+</html>

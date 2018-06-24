@@ -1,0 +1,172 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Уводни део у програмирање у Паскалу</title>
+
+<link rel="stylesheet" type="text/css" media="screen" href="css/navigation.css" />
+
+<style type="text/css">
+body{padding: 20px;background-color: #0f67c7;
+    font: 90% "Trebuchet MS",Verdana,Arial,sans-serif}
+h1,h2,p{margin: 0 10px}
+h1{font-size: 250%;color: #000000}
+h2{font-size: 200%;color: #000000}
+h2{padding-top: 0.3em}
+div#box{ position:relative;float:left;top:16px;left:16px;width:500px;background: #ffffff}
+div#tinybox{ position:relative;float:right;top:16px;right:16px;width:200px;background: #ffffff}
+
+b.rtop, b.rbottom{display:block;background: #0f67c7}
+b.rtop b, b.rbottom b{display:block;height: 1px;
+    overflow: hidden; background: #ffffff}
+b.r1{margin: 0 5px}
+b.r2{margin: 0 3px}
+b.r3{margin: 0 2px}
+b.rtop b.r4, b.rbottom b.r4{margin: 0 1px;height: 2px}
+
+body {
+width:750px;
+margin:0 auto;
+margin-top:30px;
+}
+
+
+
+/* ----- HEADER ----- */
+
+
+
+#header {
+width:750px;
+height:190px;
+background-image: url(images/title.png);
+}
+
+#animatedtabs {
+position: absolute;
+top: 207px;
+}
+
+
+
+
+
+/* ----- MAIN CONTENT ----- */
+
+
+
+#content { 
+width:750px;
+min-height:450px; /* for modern browsers */
+height:auto !important; /* for modern browsers */
+height:450px; /* for IE5.x and IE6 */background-color:#333333;
+background-image: url(images/bg.png);
+background-repeat: repeat;
+
+}
+
+.clear{
+clear:both;
+}
+
+
+/* ----- FOOTER ----- */
+
+
+
+#footer { 
+width:750px;
+height:100px;
+background-image: url(images/bottom.png);
+}
+
+#copyright {
+text-align: center;
+position: relative;
+top: 70px;
+}
+
+
+</style>
+
+
+</head>
+<body>
+<style type="text/css">
+<!--
+body {
+background-color: #ffffff;
+background-image: url(images/gradient.jpg);
+background-repeat: repeat-x;
+}
+-->
+</style>
+
+<div id="header">
+<div id="animatedtabs" class="animatedtabs">
+<ul>
+<li><a href="index.html" title="Home"><span>Почетна</span></a></li>
+<li><a href="basic.html" title="Basics"><span>Основе</span></a></li>
+<li><a href="exam.html" title="Examples"><span>Примери</span></a></li>
+<li class="selected"><a href="javascript:this.location.reload();" title="Exercise"><span>Вежбе</span></a></li>
+<li><a href="cont.html" title="Contact"><span>Контакт+Инфо</span></a></li>	
+</ul>
+</div>
+         </div>
+
+<div id="content">
+<div id="box">
+<b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b>
+<center><h1>Наредба циклуса са пост-условом</h1></center>
+<hr>
+<p>Колико пута ће се извршити тело циклуса:
+<br>а)<code>n:=1;<br>repeat<br>n:=2*n; writeln(n)<br>untiln=1;</code>
+<br>б)<code>num:=0<br>repeat<br>num:=num+1; writeln(num)<br>until (num>1) and (num<0);</code></p>
+<br>
+<hr>
+<p>Колика ће бити вредност променљиве s по изласку из циклуса:
+<br>а)<code>s:=0; i:=1;<br>repeat<br>s:=s+1/i; i:=i-1<br>until i<=1;</code>
+<br>б)<code>s:=1;<br>repeat<br>writeln(s); s:=s+2<br>until (s=11);</code></p>
+<br>
+<hr>
+<p>Ако су дати циклуси
+<br><code>i:=1; while i<n do i:=1;<br>i:=1; repeat i:=i+1; until i>=n;</code>
+<br>која од следећих тврђења су тачна за дати позитиван цео број n?
+<br>1 Оба циклуса ће се извршити исти број пута за n>1
+<br>2 Циклус repeat ... until се за неке вредности  неће извршавати
+<br>3 while ... do циклус ће се извршавати n-1 пута
+<br>а)ниједно; б)само 1; б)само 2; г)само 3; д)само 1 и 3; ђ)само 1 и 2.</p>
+<br>
+<hr>
+<p>Написати наредбу циклуса са пост-условом за израчунавање степена променљиве  x , почев од x<sup>2</sup>:x<sup>2</sup>,x<sup>4</sup>,x<sup>8</sup>, ..., док степен од x не добије вредност већу од 10<sup>8</sup>. Претпоставка је x>1</p>
+<br>
+<hr>
+<p>Написати програм којим се штампају сви степени двојке не већи од унете вредности променљиве granica, која је већа од 2.</p>
+<br>
+<br>
+<b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
+</div>
+<div id="tinybox">
+<b class="rtop"><b class="r1"></b><b class="r2"></b><b class="r3"></b><b class="r4"></b></b>
+<center><h2>Задаци</h2></center>
+<hr>
+<ul>
+<li><a href="readwrite.html">Наредбе улаза и излаза</a></li>
+<li><a href="dodela.html">Наредба доделе</a></li>
+<li><a href="program.html">Креирање програма</a></li>
+<li><a href="if.html">Условна наредба</a></li>
+<li><a href="case.html">Наредба вишеструког гранања</a></li>
+<li><a href="for.html">Наредба циклуса са параметром</a></li>
+<li><a href="while.html">Наредба циклуса са предусловом</a></li>
+<li><a href="repeat.html">Наредба циклуса са пост-условом</a></li>
+</ul>
+<b class="rbottom"><b class="r4"></b><b class="r3"></b><b class="r2"></b><b class="r1"></b></b>
+</div>
+<div class="clear"></div>
+
+</div>
+<div id="footer">
+<div id="copyright"><font color="#ffffff">©2008 - Marx Cartoonee</font></div>
+</div>
+</body>
+</html>
