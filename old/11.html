@@ -1,0 +1,260 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Уводни део у програмирање у Паскалу</title>
+        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="/css/navigation.css">
+        <script src="/js/calcHeight.js"></script>
+    </head>
+
+    <body>
+        <div id="header">
+            <div id="animatedtabs" class="animatedtabs">
+                <ul>
+                    <li>
+                        <a href="index.html" title="Home">
+                            <span>Почетна</span>
+                        </a>
+                    </li>
+                    <li class="selected">
+                        <a href="javascript:this.location.reload();" title="Basics">
+                            <span>Основе</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="exam.html" title="Examples">
+                            <span>Примери</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="exer.html" title="Exercise">
+                            <span>Вежбе</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cont.html" title="Contact">
+                            <span>Контакт+Инфо</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="content">
+            <div id="box">
+                <b class="rtop">
+                    <b class="r1"></b>
+                    <b class="r2"></b>
+                    <b class="r3"></b>
+                    <b class="r4"></b>
+                </b>
+                <center>
+                    <h1>Наредба доделе</h1>
+                </center>
+                <br>
+                <p>Додела (Како јој само име каже) додељује вредност променљивој. За разлику од досадашњих наредби, додела има
+                    облик релације.</p>
+                <br>
+                <p>
+                    <code>x := 3;</code>
+                </p>
+                <br>
+                <p>Графички симбол доделе је</p>
+                <br>
+                <p>
+                    <img src="/images/dodela.png">
+                </p>
+                <br>
+                <p>Садржај мора одговарати типу променљиве, и може бити константа, нека друга променљива или резултат математичког
+                    или логичког израза.</p>
+                <br>
+                <p>
+                    <code>x := 1;<br>x := a;<br>x := 8/2;<br>x:=a<5;</code>
+                </p>
+                <br>
+                <center>
+                    <h3>Чести облици примене</h3>
+                </center>
+                <br>
+                <ul>
+                    <li>
+                        <b>Замена вредности</b>
+                    </li>
+                    <br>
+                    <p>Замена вредности је нешто што хоће да збуни свеже кориснике паскала. Рецимо да променљиве a и b имају
+                        овакве вредности a=1 b=2. Они би замену њихових вредности урадили овако</p>
+                    <br>
+                    <p>
+                        <code>a:=b;<br>b:=a;</code>
+                    </p>
+                    <br>
+                    <p>Истина, променљива а би променила вредност, али би променљива b наследила ту промењену вредност, одн.
+                        обе би имале вредност 2.</p>
+                    <br>
+                    <p>Најлакши начин да се ово реши је да се уведе трећа, помоћна, променљива која ће сачувати вредност једне
+                        од ове две.</p>
+                    <br>
+                    <p>
+                        <code>c:=a;<br>a:=b;<br>b:=c;<br></code>
+                    </p>
+                    <p>Прво ће c преузети вредност 1 од а, затим ће а преузети вредност 2 од b, и на крају ће b преузети вредност
+                        1 од c.</p>
+                    <br>
+                    <li>
+                        <b>Сума</b>
+                    </li>
+                    <br>
+                    <p>Сума се користи када треба да се прикаже збир више вредности неке променљиве из неког од циклуса. Сума
+                        мора имати почетну вредност 0 и има овакав облик</p>
+                    <br>
+                    <p>Изван циклуса</p>
+                    <p>
+                        <code>s:=0;</code>
+                    </p>
+                    <br>
+                    <p>Унутар циклуса</p>
+                    <p>
+                        <code>s:=s+x;</code>
+                    </p>
+                    <br>
+                    <p>Сада ће променљива s себи додавати све вредности променљиве x док се циклус не заврши, и збир се потом
+                        може исписати.</p>
+                    <br>
+                    <li>
+                        <b>Бројач</b>
+                    </li>
+                    <br>
+                    <p>Бројач се користи када треба да се израчуна колико пута се поновио неки циклус. Бројач, као и сума, мора
+                        имати почетну вредност 0.</p>
+                    <br>
+                    <p>Изван циклуса</p>
+                    <p>
+                        <code>b:=0;</code>
+                    </p>
+                    <br>
+                    <p>Унутар циклуса</p>
+                    <p>
+                        <code>b=b+1;</code>
+                    </p>
+                    <br>
+                    <p>За свако понављање циклуса променљива b ће се повећати за 1. Сума се може поделити са бројачем за израчунавање
+                        просека.
+                    </p>
+                    <br>
+                    <li>
+                        <b>Факторијел</b>
+                    </li>
+                    <br>
+                    <p>Факторијел се користи за приказивање производа више вредности неке променљиве унутар циклуса. За разлику
+                        од претходних, факторал мора да има почетну вредност 1.</p>
+                    <br>
+                    <p>Изван циклуса</p>
+                    <p>
+                        <code>p:=1;</code>
+                    </p>
+                    <br>
+                    <p>Унутар циклуса</p>
+                    <p>
+                        <code>p:=p*x;</code>
+                    </p>
+                </ul>
+                <br>
+                <b class="rbottom">
+                    <b class="r4"></b>
+                    <b class="r3"></b>
+                    <b class="r2"></b>
+                    <b class="r1"></b>
+                </b>
+            </div>
+            <div id="tinybox">
+                <b class="rtop">
+                    <b class="r1"></b>
+                    <b class="r2"></b>
+                    <b class="r3"></b>
+                    <b class="r4"></b>
+                </b>
+                <center>
+                    <h2>Лекције</h2>
+                    <hr>
+                </center>
+                <ul>
+                    <li>
+                        <a href="basic.html">Основе</a>
+                    </li>
+                    <li>
+                        <a href="2.html">Резервисане речи и специјални знаци</a>
+                    </li>
+                    <li>
+                        <a href="3.html">Типови података</a>
+                    </li>
+                    <li>Основни типови променљивих</li>
+                    <ul>
+                        <li>
+                            <a href="4.html">Целобројни</a>
+                        </li>
+                        <li>
+                            <a href="5.html">Реални</a>
+                        </li>
+                        <li>
+                            <a href="6.html">Логички</a>
+                        </li>
+                        <li>
+                            <a href="7.html">Знаковни</a>
+                        </li>
+                    </ul>
+                    <li>
+                        <a href="8.html">Симболи алгоритма</a>
+                    </li>
+                    <li>Програмске наредбе</li>
+                    <ul>
+                        <li>
+                            <a href="9.html">Излазна</a>
+                        </li>
+                        <li>
+                            <a href="10.html">Улазна</a>
+                        </li>
+                        <li>
+                            <a href="11.html">Додела</a>
+                        </li>
+                        <li>Услови</li>
+                        <ul>
+                            <li>
+                                <a href="12.html">If</a>
+                            </li>
+                            <li>
+                                <a href="13.html">Case</a>
+                            </li>
+                        </ul>
+                        <li>Циклуси</li>
+                        <ul>
+                            <li>
+                                <a href="14.html">For</a>
+                            </li>
+                            <li>
+                                <a href="15.html">While</a>
+                            </li>
+                            <li>
+                                <a href="16.html">Repeat</a>
+                            </li>
+                        </ul>
+                    </ul>
+                </ul>
+                <b class="rbottom">
+                    <b class="r4"></b>
+                    <b class="r3"></b>
+                    <b class="r2"></b>
+                    <b class="r1"></b>
+                </b>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div id="footer">
+            <div id="copyright">
+                <font color="#ffffff">©2008 - Marx Cartoonee</font>
+            </div>
+        </div>
+    </body>
+
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/css/new.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+            crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+        <title>Уводни део у програмирање у Паскалу</title>
+    </head>
+
+    <body>
+        <div class="container rounded my-4 shadow">
+            <header class="row bg-white rounded-top border border-primary">
+                <div class="w-100 text-center text-primary">
+                    <h1 class="font-weight-bold my-4">Увод у програмирање у Паскалу</h1>
+
+                    <nav class="nav nav-tabs flex-row justify-content-center">
+                        <a href="/" class="flex-sm-fill flex-md-grow-0 nav-link">Почетна</a>
+                        <a href="/lessons" class="flex-sm-fill flex-md-grow-0 nav-link active">Лекције</a>
+                        <a href="/examples" class="flex-sm-fill flex-md-grow-0 nav-link">Примери</a>
+                        <a href="/practice" class="flex-sm-fill flex-md-grow-0 nav-link">Вежбе</a>
+                        <a href="/about" class="flex-sm-fill flex-md-grow-0 nav-link">О нама</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="row bg-primary p-2">
+                <div class="col-md-8">
+                    <div class="rounded bg-white my-3 p-4">
+                        <h2>Условни циклус са пост-условом</h2>
+                        <p>Овај циклус је сличан условном циклусу, осим што уместо предуслова има пост-услов. Команда овог услова
+                            је REPEAT, а графички симбол изгледа овако</p>
+                        <img src="/images/ciklus2.png" class="img-fluid my-2">
+                        <p> Циклус има овакав облик</p>
+                        <code>
+                            'додела вредности'
+                            <br>REPEAT
+                            <br>'команда'
+                            <br>'промена вредности'
+                            <br>UNTIL 'услов'
+                            <br>
+                            <br>x:=1;
+                            <br>REPEAT
+                            <br>WRITELN (x);
+                            <br>x:=x+1;
+                            <br>UNTIL x=5;
+                        </code>
+                        <p>И овде се јављају иста три корака као код циклусне наредбе, само што имају другачији редослед.</p>
+                        <p>Прво иде додела почетне вредности.</p>
+                        <code>x:=1;</code>
+                        <p>Затим промена вредности.</p>
+                        <code>x:=x+1;</code>
+                        <p>И на крају иде провера услова.</p>
+                        <code>UNTIL x=5;</code>
+                        <p>Код овог циклуса се не користе BEGIN и END;, јер њихову улогу преузимају REPEAT и UNTIL. Такође се
+                            и код овог циклуса може дефинисати вредност за коју се мења променљива.</p>
+                        <p>Циклус се понавља докле год је вредност Буловог израза лаж.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-group rounded bg-white my-3">
+                        <h3 class="list-group-item list-group-item-primary">Лекције</h3>
+                        <a class="list-group-item list-group-item-action" href="/lessons">Основе</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/special">Резервисане речи и специјални знаци</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/types">Типови података</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/diagram">Симболи алгоритма</a>
+                        <p class="list-group-item list-group-item-primary">Основни типови променљивих</p>
+                        <a class="list-group-item list-group-item-action" href="/lessons/integer">Целобројни</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/real">Реални</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/boolean">Логички</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/char">Знаковни</a>
+                        <p class="list-group-item list-group-item-primary">Програмске наредбе</p>
+                        <a class="list-group-item list-group-item-action" href="/lessons/write">Излазна</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/read">Улазна</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/set">Додела</a>
+                        <p class="list-group-item list-group-item-primary">Услови</p>
+                        <a class="list-group-item list-group-item-action" href="/lessons/if">If</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/case">Case</a>
+                        <p class="list-group-item list-group-item-primary">Циклуси</p>
+                        <a class="list-group-item list-group-item-action" href="/lessons/for">For</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/while">While</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/repeat">Repeat</a>
+                    </div>
+                </div>
+            </div>
+            <footer class="row bg-primary text-white rounded-bottom">
+                <div class="w-100 text-center my-4">
+                    <span>&copy;2008-2018 Марко Херћан</span>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+</html>
