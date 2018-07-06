@@ -1,0 +1,123 @@
+body {
+  width: 750px;
+  margin: 0 auto;
+  margin-top: 30px;
+  padding: 20px;
+  font: 90% "Trebuchet MS", Verdana, Arial, sans-serif;
+  background-color: #000000;
+  background-image: url(/images/gradient.jpg);
+  background-repeat: repeat-x;
+}
+
+h1,
+h2,
+p {
+  margin: 0 10px;
+}
+
+h1 {
+  font-size: 250%;
+  color: #000000;
+}
+
+h2 {
+  font-size: 200%;
+  color: #000000;
+}
+
+h2 {
+  padding-top: 0.3em;
+}
+
+div#box {
+  position: relative;
+  float: left;
+  top: 16px;
+  left: 16px;
+  width: 500px;
+  background: #ffffff;
+}
+
+div#tinybox {
+  position: relative;
+  float: right;
+  top: 16px;
+  right: 16px;
+  width: 200px;
+  background: #ffffff;
+}
+
+b.rtop,
+b.rbottom {
+  display: block;
+  background: #0f67c7;
+}
+
+b.rtop b,
+b.rbottom b {
+  display: block;
+  height: 1px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+b.r1 {
+  margin: 0 5px;
+}
+
+b.r2 {
+  margin: 0 3px;
+}
+
+b.r3 {
+  margin: 0 2px;
+}
+
+b.rtop b.r4,
+b.rbottom b.r4 {
+  margin: 0 1px;
+  height: 2px;
+}
+
+/* ----- HEADER ----- */
+
+#header {
+  width: 750px;
+  height: 190px;
+  background-image: url(/images/title.png);
+}
+
+#animatedtabs {
+  position: absolute;
+  top: 207px;
+}
+
+/* ----- MAIN CONTENT ----- */
+
+#content {
+  width: 750px;
+  min-height: 450px; /* for modern browsers */
+  height: auto !important; /* for modern browsers */
+  height: 450px; /* for IE5.x and IE6 */
+  background-color: #333333;
+  background-image: url(/images/bg.png);
+  background-repeat: repeat;
+}
+
+.clear {
+  clear: both;
+}
+
+/* ----- FOOTER ----- */
+
+#footer {
+  width: 750px;
+  height: 100px;
+  background-image: url(/images/bottom.png);
+}
+
+#copyright {
+  text-align: center;
+  position: relative;
+  top: 70px;
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+<base href="/pascal/">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/css/new.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+            crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+        <title>Уводни део у програмирање у Паскалу</title>
+    </head>
+
+    <body>
+        <div class="container rounded my-4 shadow">
+            <header class="row bg-white rounded-top border border-primary">
+                <div class="w-100 text-center text-primary">
+                    <h1 class="font-weight-bold my-4">Увод у програмирање у Паскалу</h1>
+
+                    <nav class="nav nav-tabs flex-row justify-content-center">
+                        <a href="/" class="flex-sm-fill flex-md-grow-0 nav-link">Почетна</a>
+                        <a href="/lessons" class="flex-sm-fill flex-md-grow-0 nav-link">Лекције</a>
+                        <a href="/examples" class="flex-sm-fill flex-md-grow-0 nav-link">Примери</a>
+                        <a href="/practice" class="flex-sm-fill flex-md-grow-0 nav-link active">Вежбе</a>
+                        <a href="/about" class="flex-sm-fill flex-md-grow-0 nav-link">О нама</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="row bg-primary p-2">
+                <div class="col-md-8">
+                    <div class="rounded bg-white my-3 p-4">
+                        <div class="list-group-flush">
+                            <h2>Наредба циклуса са предусловом</h2>
+                            <div class="list-group-item">
+                                <p>Дат је низ наредби:</p>
+                                <code>
+                                    a:=1; b:=1;
+                                    <br>while a+b<8 do
+                                    <br>begin
+                                    <br>a:=a+1;
+                                    <br>b:=b+2
+                                    <br>end;s:=a+b;
+                                </code>
+                                <p>Колико пута ће се поновити циклус и шта ће бити вредност променљивих a , b и s после извршења
+                                    наведеног низа наредби?</p>
+                            </div>
+                            <div class="list-group-item">
+                                <p>Шта ће бити вредности променљивих a и b после извршења наредби:</p>
+                                <code>
+                                    a:=1; b:=1;
+                                    <br>while a<=3 do a:=a+1;
+                                    <br>b:=b+1;
+                                </code>
+                            </div>
+                            <div class="list-group-item">
+                                <p>Дат је низ наредби:</p>
+                                <code>
+                                    p:=a; s:=0;
+                                    <br>while p>0 do
+                                    <br>begin
+                                    <br>s:=s+p mod 10;
+                                    <br>p:=p div 10
+                                    <br>end;
+                                </code>
+                                <p>Одредити вредност резултата s за следеће вредности улазних величина</p>
+                                <ol>
+                                    <li>a=43</li>
+                                    <li>a=34</li>
+                                    <li>a=105</li>
+                                </ol>
+                            </div>
+                            <div class="list-group-item">
+                                <p>Да ли је логички коректан следећи циклус:</p>
+                                <code>while a < b do c:=a+b</code>
+                            </div>
+                            <div class="list-group-item">
+                                <p>Написати наредбу за израчунавање степена променљиве x , почев од x
+                                    <sup>2</sup>:</p>
+                                <ul>
+                                    <li>x
+                                        <sup>2</sup>
+                                    </li>
+                                    <li>x
+                                        <sup>4</sup>
+                                    </li>
+                                    <li>x
+                                        <sup>8</sup>
+                                    </li>
+                                    <li>x
+                                        <sup>16</sup>
+                                    </li>
+                                    <li>...</li>
+                                </ul>
+                                <p>док степен од x не добије вредност већу од 10
+                                    <sup>8</sup>.</p>
+                                <p>Претпоставка је: x>1</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-group rounded bg-white my-3">
+                        <h2 class="list-group-item list-group-item-primary">Категорије</h2>
+                        <a class="list-group-item list-group-item-action" href="/practice/readwrite">Наредбе улаза и излаза</a>
+                        <a class="list-group-item list-group-item-action" href="/practice/set">Наредба доделе</a>
+                        <a class="list-group-item list-group-item-action" href="/practice/program">Креирање програма</a>
+                        <a class="list-group-item list-group-item-action" href="/practice/if">Условна наредба</a>
+                        <a class="list-group-item list-group-item-action" href="/practice/case">Наредба вишеструког гранања</a>
+                        <a class="list-group-item list-group-item-action" href="/practice/for">Наредба циклуса са параметром</a>
+                        <a class="list-group-item list-group-item-action" href="/practice/while">Наредба циклуса са предусловом</a>
+                        <a class="list-group-item list-group-item-action" href="/practice/repeat">Наредба циклуса са пост-условом</a>
+                    </div>
+                </div>
+            </div>
+            <footer class="row bg-primary text-white rounded-bottom">
+                <div class="w-100 text-center my-4">
+                    <span>&copy;2008-2018 Марко Херћан</span>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+</html>

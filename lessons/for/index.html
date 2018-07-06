@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+<base href="/pascal/">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/css/new.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+            crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+        <title>Уводни део у програмирање у Паскалу</title>
+    </head>
+
+    <body>
+        <div class="container rounded my-4 shadow">
+            <header class="row bg-white rounded-top border border-primary">
+                <div class="w-100 text-center text-primary">
+                    <h1 class="font-weight-bold my-4">Увод у програмирање у Паскалу</h1>
+
+                    <nav class="nav nav-tabs flex-row justify-content-center">
+                        <a href="/" class="flex-sm-fill flex-md-grow-0 nav-link">Почетна</a>
+                        <a href="/lessons" class="flex-sm-fill flex-md-grow-0 nav-link active">Лекције</a>
+                        <a href="/examples" class="flex-sm-fill flex-md-grow-0 nav-link">Примери</a>
+                        <a href="/practice" class="flex-sm-fill flex-md-grow-0 nav-link">Вежбе</a>
+                        <a href="/about" class="flex-sm-fill flex-md-grow-0 nav-link">О нама</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="row bg-primary p-2">
+                <div class="col-md-8">
+                    <div class="rounded bg-white my-3 p-4">
+                        <h2>Циклус са параметром</h2>
+                        <p>Наредба циклуса или FOR спада у групу наредби доделе. Самим тим има исти графички симбол као наредба
+                            доделе, са малом разликом.</p>
+                        <p>Симбол циклусне наредбе има и повратни смер.</p>
+                        <p>
+                            <img src="/images/ciklus.png" class="img-fluid my-2">
+                        </p>
+                        <p>Циклусна наредба има овакав облик</p>
+                        <p>
+                            <code>
+                                FOR 'променљива':='почетна вредност' TO 'крајња вредност' DO
+                                <br>FOR x:=1 TO 5 DO
+                            </code>
+                        </p>
+                        <p>Такође је могуће као једну од вредности ставити другу променљиву.</p>
+                        <p>
+                            <code>FOR x:=1 TO d DO</code>
+                        </p>
+                        <p>Вредност променљиве x ће се повећавати за 1 док не стигне до крајње вредности, тада се циклус прекида,
+                            овај облик се зове падајући низ. Самим тим је очигледно да променљива у циклусу мора бити декларисана
+                            као INTEGER. Исто важи и за променљиве које се користе као вредности. Циклусна наредба ће извршити
+                            све што је под циклусом све док не наиђе на први ;, тада се враћа по следећу вредност. Уколико
+                            се под циклусом налази више од једне програмске линије, повезују се са BEGIN и END;.
+                        </p>
+                        <p>
+                            <code>
+                                FOR x:=1 TO 5 DO
+                                <br>WRITELN (x);
+                                <br>
+                                <br>FOR x:=1 TO 5 DO
+                                <br>BEGIN
+                                <br>WRITELN (x);
+                                <br>WRITELN (x*2);
+                                <br>END;
+                            </code>
+                        </p>
+                        <p>Циклусна наредба такође има и растући низ.</p>
+                        <p>
+                            <code>
+                                FOR 'променљива':='почетна вредност' DOWNTO 'крајња вредност' DO
+                                <br>FOR x:=5 DOWNTO 1 DO
+                            </code>
+                        </p>
+                        <p>Циклус ће сада ићи од 5 до 1.</p>
+                        <p>Ако се у програму налази дупли циклус (циклус у циклусу), унутрашњи циклус се понавља онолико пута
+                            колико је то одређено променом вредности променљиве из првог циклуса. Циклуси се не смеју укрштати.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-group rounded bg-white my-3">
+                        <h3 class="list-group-item list-group-item-primary">Лекције</h3>
+                        <a class="list-group-item list-group-item-action" href="/lessons">Основе</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/special">Резервисане речи и специјални знаци</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/types">Типови података</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/diagram">Симболи алгоритма</a>
+                        <p class="list-group-item list-group-item-primary">Основни типови променљивих</p>
+                        <a class="list-group-item list-group-item-action" href="/lessons/integer">Целобројни</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/real">Реални</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/boolean">Логички</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/char">Знаковни</a>
+                        <p class="list-group-item list-group-item-primary">Програмске наредбе</p>
+                        <a class="list-group-item list-group-item-action" href="/lessons/write">Излазна</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/read">Улазна</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/set">Додела</a>
+                        <p class="list-group-item list-group-item-primary">Услови</p>
+                        <a class="list-group-item list-group-item-action" href="/lessons/if">If</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/case">Case</a>
+                        <p class="list-group-item list-group-item-primary">Циклуси</p>
+                        <a class="list-group-item list-group-item-action" href="/lessons/for">For</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/while">While</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/repeat">Repeat</a>
+                    </div>
+                </div>
+            </div>
+            <footer class="row bg-primary text-white rounded-bottom">
+                <div class="w-100 text-center my-4">
+                    <span>&copy;2008-2018 Марко Херћан</span>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+</html>

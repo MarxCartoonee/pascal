@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+<base href="/pascal/">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/css/new.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+            crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+        <title>Уводни део у програмирање у Паскалу</title>
+    </head>
+
+    <body>
+        <div class="container rounded my-4 shadow">
+            <header class="row bg-white rounded-top border border-primary">
+                <div class="w-100 text-center text-primary">
+                    <h1 class="font-weight-bold my-4">Увод у програмирање у Паскалу</h1>
+
+                    <nav class="nav nav-tabs flex-row justify-content-center">
+                        <a href="/" class="flex-sm-fill flex-md-grow-0 nav-link">Почетна</a>
+                        <a href="/lessons" class="flex-sm-fill flex-md-grow-0 nav-link">Лекције</a>
+                        <a href="/examples" class="flex-sm-fill flex-md-grow-0 nav-link">Примери</a>
+                        <a href="/practice" class="flex-sm-fill flex-md-grow-0 nav-link active">Вежбе</a>
+                        <a href="/about" class="flex-sm-fill flex-md-grow-0 nav-link">О нама</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="row bg-primary p-2">
+                <div class="col-md-8">
+                    <div class="rounded bg-white my-3 p-4">
+                        <div class="list-group-flush">
+                            <h2 class="list-group-item">Условна наредба</h2>
+                            <div class="list-group-item">
+                                <p>Које ће вредности имати променљиве j и k после извршења наредбе условног преласка:</p>
+                                <code>
+                                    if j>k
+                                    <br>then j:=k
+                                    <br>else k:=k-1
+                                </code>
+                                <p>ако су вредности променљивих:</p>
+                                <ol>
+                                    <li>j=2, k=4</li>
+                                    <li>j=2, k=2</li>
+                                    <li>j=4, k=2</li>
+                                </ol>
+                            </div>
+                            <div class="list-group-item">
+                                <p>Написати наредбу условног преласка којом се вредност променљиве f израчунава по формули:</p>
+                                <code>
+                                    f=a+b, ако је а непарно;
+                                    <br>f=a*b, ако је а парно
+                                </code>
+                            </div>
+                            <div class="list-group-item">
+                                <p>За које вредности променљиве а нису еквивалентне наредбе условног преласка:</p>
+                                <ol>
+                                    <li>
+                                        <code>if a>0 then b:=2 else b:=5</code>
+                                    </li>
+                                    <li>
+                                        <code>if a<0 then b:=5 else b:=2</code>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="list-group-item">
+                                <p>Коју ће вредност имати променљива x по извршењу следећих наредби:</p>
+                                <ol>
+                                    <li>
+                                        <code>
+                                            x:=2;
+                                            <br>if x<3 then x:=x+3;
+                                        </code>
+                                    </li>
+                                    <li>
+                                        <code>
+                                            x:=2; y:=1;
+                                            <br>if x+y<=x-y
+                                            <br>then x:=5
+                                            <br>else x:=+5;
+                                        </code>
+                                    </li>
+                                    <li>
+                                        <code>
+                                            x:=1; y:=-5
+                                            <br>if abs(y)>2
+                                            <br>then
+                                            <br>if y<0
+                                            <br>then x:=0
+                                            <br>else x:=2;
+                                        </code>
+                                    </li>
+                                    <li>
+                                        <code>
+                                            x:=10; y:=2;
+                                            <br>if abs(y)>3
+                                            <br>then begin
+                                            <br>if y<0
+                                            <br>then x:=3
+                                            <br>else x:=4
+                                            <br>end;
+                                        </code>
+                                    </li>
+                                    <li>
+                                        <code>
+                                            x:=10; y:=2;
+                                            <br>if abs(y)>3
+                                            <br>then
+                                            <br>begin if y<0 then x:=3 end
+                                            <br>else x:=4;
+                                        </code>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="list-group-item">
+                                <p>Да ли се следећом наредбом условног преласка:</p>
+                                <code>
+                                    if a<=6
+                                    <br>then c:=1
+                                    <br>else if a>6
+                                    <br>then c:=2
+                                    <br>else c:=3
+                                </code>
+                                <p>може променљивој a доделити вредност 3? Како се може упростити дата наредба?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-group rounded bg-white my-3">
+                        <h2 class="list-group-item list-group-item-primary">Категорије</h2>
+                        <a class="list-group-item list-group-item-action" href="/practice/readwrite">Наредбе улаза и излаза</a>
+                        <a class="list-group-item list-group-item-action" href="/practice/set">Наредба доделе</a>
+                        <a class="list-group-item list-group-item-action" href="/practice/program">Креирање програма</a>
+                        <a class="list-group-item list-group-item-action" href="/practice/if">Условна наредба</a>
+                        <a class="list-group-item list-group-item-action" href="/practice/case">Наредба вишеструког гранања</a>
+                        <a class="list-group-item list-group-item-action" href="/practice/for">Наредба циклуса са параметром</a>
+                        <a class="list-group-item list-group-item-action" href="/practice/while">Наредба циклуса са предусловом</a>
+                        <a class="list-group-item list-group-item-action" href="/practice/repeat">Наредба циклуса са пост-условом</a>
+                    </div>
+                </div>
+            </div>
+            <footer class="row bg-primary text-white rounded-bottom">
+                <div class="w-100 text-center my-4">
+                    <span>&copy;2008-2018 Марко Херћан</span>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+</html>

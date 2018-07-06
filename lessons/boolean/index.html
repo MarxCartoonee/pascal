@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+<base href="/pascal/">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="/css/new.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+            crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+            crossorigin="anonymous"></script>
+        <title>Уводни део у програмирање у Паскалу</title>
+    </head>
+
+    <body>
+        <div class="container rounded my-4 shadow">
+            <header class="row bg-white rounded-top border border-primary">
+                <div class="w-100 text-center text-primary">
+                    <h1 class="font-weight-bold my-4">Увод у програмирање у Паскалу</h1>
+
+                    <nav class="nav nav-tabs flex-row justify-content-center">
+                        <a href="/" class="flex-sm-fill flex-md-grow-0 nav-link">Почетна</a>
+                        <a href="/lessons" class="flex-sm-fill flex-md-grow-0 nav-link active">Лекције</a>
+                        <a href="/examples" class="flex-sm-fill flex-md-grow-0 nav-link">Примери</a>
+                        <a href="/practice" class="flex-sm-fill flex-md-grow-0 nav-link">Вежбе</a>
+                        <a href="/about" class="flex-sm-fill flex-md-grow-0 nav-link">О нама</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="row bg-primary p-2">
+                <div class="col-md-8">
+                    <div class="rounded bg-white my-3 p-4">
+                        <h2>Логички тип</h2>
+                        <p>Логички тип или BOOLEAN је добио име по енглеском математичару Џорџу Булу који је први развио логичку
+                            алгебру.
+                        </p>
+                        <p>У логичком типу се ради са логичким вредностима</p>
+                        <p>
+                            <code>Лаж Истина<br>0&nbsp&nbsp&nbsp&nbsp 1<br>T&nbsp&nbsp&nbsp&nbsp &#8869; </code>
+                        </p>
+                        <p>Условне наредбе користе логички тип за контролисање извођења редоследа операција или делова програма.</p>
+                        <p>Релацијске операције су исте као код целог и реалног, осим што се још додају</p>
+                        <p>
+                            <code>NOT (не) OR (или) AND (и)</code>
+                        </p>
+                        <p>Табеле са овим релацијама изгледају овако</code>
+                        </p>
+                        <p>
+                            <code>NOT T → &#8869; 
+                                <br>NOT &#8869; → T
+                                <br>T OR T → T
+                                <br>T OR &#8869; → T
+                                <br>&#8869; OR T → T
+                                <br>&#8869; OR &#8869; → &#8869; 
+                                <br>T AND T → T
+                                <br>T AND &#8869; → &#8869; 
+                                <br>&#8869; AND T → &#8869; 
+                                <br>&#8869; AND &#8869; → &#8869;
+                            </code>
+                        </p>
+                        <p>А приоритет извођења изгледа овако (укључујући и операције од целобројног типа)</p>
+                        <p>
+                            <code>
+                                I NOT
+                                <br>II / * DIV MOD AND
+                                <br>III + - OR
+                                <br>IV = < > => =< <>
+                            </code>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="list-group rounded bg-white my-3">
+                        <h3 class="list-group-item list-group-item-primary">Лекције</h3>
+                        <a class="list-group-item list-group-item-action" href="/lessons">Основе</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/special">Резервисане речи и специјални знаци</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/types">Типови података</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/diagram">Симболи алгоритма</a>
+                        <p class="list-group-item list-group-item-primary">Основни типови променљивих</p>
+                        <a class="list-group-item list-group-item-action" href="/lessons/integer">Целобројни</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/real">Реални</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/boolean">Логички</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/char">Знаковни</a>
+                        <p class="list-group-item list-group-item-primary">Програмске наредбе</p>
+                        <a class="list-group-item list-group-item-action" href="/lessons/write">Излазна</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/read">Улазна</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/set">Додела</a>
+                        <p class="list-group-item list-group-item-primary">Услови</p>
+                        <a class="list-group-item list-group-item-action" href="/lessons/if">If</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/case">Case</a>
+                        <p class="list-group-item list-group-item-primary">Циклуси</p>
+                        <a class="list-group-item list-group-item-action" href="/lessons/for">For</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/while">While</a>
+                        <a class="list-group-item list-group-item-action" href="/lessons/repeat">Repeat</a>
+                    </div>
+                </div>
+            </div>
+            <footer class="row bg-primary text-white rounded-bottom">
+                <div class="w-100 text-center my-4">
+                    <span>&copy;2008-2018 Марко Херћан</span>
+                </div>
+            </footer>
+        </div>
+    </body>
+
+</html>
